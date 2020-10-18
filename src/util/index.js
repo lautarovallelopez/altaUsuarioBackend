@@ -1,6 +1,8 @@
 const join = require('lodash/join');
 const pick = require('lodash/pick');
 const reduce = require('lodash/reduce');
+const values = require('lodash/values');
+const get = require('lodash/get');
 
 const reducedList = (array, filterKey, keyData) => reduce(array, (objectsByKeyValue, obj) => {
     const value = join(values(pick(obj, filterKey)), '');
@@ -11,6 +13,4 @@ const reducedList = (array, filterKey, keyData) => reduce(array, (objectsByKeyVa
     return objectsByKeyValue;
 }, {});
 
-module.exports = {
-    reducedList
-};
+module.exports = {reducedList};

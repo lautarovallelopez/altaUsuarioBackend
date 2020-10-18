@@ -1,3 +1,5 @@
 module.exports = {
-    StatusController: require('./status')
+    StatusController: require('./status'),
+    UserController: require('./user'),
+    DocumentController: require('./document')
 };
